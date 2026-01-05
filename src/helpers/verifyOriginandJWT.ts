@@ -7,10 +7,6 @@ export const verifyOriginAndJWT = (
   userId: string
 ) => {
   let validOrigin = true;
-  // const origin = req.get("origin");
-  // if (origin === "https://algoadoptairdrop.vercel.app") {
-  //   validOrigin = true;
-  // }
 
   let validJWT = false;
   const token = req.headers.authorization?.replace("Bearer ", "").trim();

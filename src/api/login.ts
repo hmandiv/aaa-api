@@ -21,11 +21,6 @@ const generateToken = (userId: string, email: string) => {
 router.post("/login", async (req: Request, res: Response) => {
   const { email, password, walletAddress } = req.body;
 
-  // const origin = req.get("origin");
-  // if (origin !== "https://algoadoptairdrop.vercel.app") {
-  //   return res.status(403).json({ success: false, message: "Forbidden" });
-  // }
-
   try {
     if (email && password) {
       // Authenticate with email and password

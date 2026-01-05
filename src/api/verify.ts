@@ -39,7 +39,9 @@ router.post("/verify", async (req: Request, res: Response) => {
 
       // Check wallet address mismatch
       if (dbWalletAddress && dbWalletAddress !== walletAddress) {
-        throw new Error("Wallet address mismatch. Please set up the correct wallet.");
+        throw new Error(
+          "Wallet address mismatch. Please set up the correct wallet."
+        );
       }
 
       // Verify the transaction fee payment
@@ -71,7 +73,7 @@ router.get(
 
     // Validate origin (Optional: Remove or modify based on your needs)
     const origin = req.get("origin");
-    if (origin !== "https://algoadoptairdrop.vercel.app") {
+    if (origin !== "https://aaa-app-prod.vercel.app") {
       return res.status(403).json({ success: false, message: "Forbidden" });
     }
 

@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/get-total-members", async (req: Request, res: Response) => {
   // Validate origin
   const origin = req.get("origin");
-  if (origin !== "https://algoadoptairdrop.vercel.app") {
+  if (origin !== "https://aaa-app-prod.vercel.app") {
     return res.status(403).json({ success: false, message: "Forbidden" });
   }
   try {
@@ -37,7 +37,7 @@ router.post(
   async (req: Request, res: Response) => {
     // Validate origin
     const origin = req.get("origin");
-    if (origin !== "https://algoadoptairdrop.vercel.app") {
+    if (origin !== "https://aaa-app-prod.vercel.app") {
       return res.status(403).json({ success: false, message: "Forbidden" });
     }
 

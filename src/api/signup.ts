@@ -10,14 +10,13 @@ const GENESIS_REFERRAL_CODE = "GENESIS";
 
 const docmunetPath = process.env.DOCUMENT_PATH || "default_document_path";
 
-
 // POST /signup
 router.post("/signup", async (req: Request, res: Response) => {
   const { email, password, referralCode } = req.body;
 
   // Validate origin
   const origin = req.get("origin");
-  if (origin !== "https://algoadoptairdrop.vercel.app") {
+  if (origin !== "https://aaa-app-prod.vercel.app") {
     return res.status(403).json({ success: false, message: "Forbidden" });
   }
 

@@ -54,7 +54,7 @@ router.post("/create-airdrop", async (req: Request, res: Response) => {
     if (!feePaid) {
       return res.status(400).json({ message: "Invalid fee transaction" });
     }
-    
+
     await db.runTransaction(async (transaction) => {
       const airdropCollectionRef = db.collection("airdrops");
       const existingAirdropQuery = await transaction.get(
@@ -190,12 +190,8 @@ router.post("/update-claimed-address", async (req: Request, res: Response) => {
 });
 
 router.post("/get-airdrops", async (req: Request, res: Response) => {
-  
   // Verify user identity
   const origin = req.get("origin");
-  // if (origin !== "https://algoadoptairdrop.vercel.app") {
-  //   return res.status(403).json({ success: false, message: "Forbidden" });
-  // }
 
   try {
     const airdropCollectionRef = db.collection("airdrops");
