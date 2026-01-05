@@ -49,7 +49,7 @@ app.use(
   })
 );
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://aaa-app-prod.vercel.app",
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
